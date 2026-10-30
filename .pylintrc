@@ -1,0 +1,15 @@
+[MAIN]
+py-version=3.12
+# Processa os .pth do venv do projeto (instalação editável do pacote).
+init-hook=import site; site.addsitedir(".venv/Lib/site-packages")
+
+[MESSAGES CONTROL]
+# Protocols, dataclasses e objetos de estratégia têm poucos métodos públicos por desenho.
+disable=too-few-public-methods
+
+[FORMAT]
+max-line-length=120
+
+[BASIC]
+# Funções de até 5 linhas, autoexplicativas pelo nome e tipos, dispensam docstring.
+docstring-min-length=5

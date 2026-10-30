@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-sai-library"
+version = "0.1.0"
+description = "Cliente Python assíncrono para a API do SAI, com tools acionadas pelo modelo"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "GPL-3.0" }  # a mesma do ts-sai-library (mesmo autor, open source)
+dependencies = [
+    "httpx>=0.27,<1",
+    "python-dotenv>=1.0,<2",
+]
+
+[project.scripts]
+sai-library = "sai_library.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sai_library*"]
